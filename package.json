@@ -1,0 +1,36 @@
+{
+  "name": "system-monitor",
+  "version": "1.0.0",
+  "description": "macOS System Monitor - CPU & RAM",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [
+    "electron",
+    "monitor",
+    "system"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "systeminformation": "^5.21.20"
+  },
+  "build": {
+    "appId": "com.systemmonitor.app",
+    "productName": "System Monitor",
+    "mac": {
+      "category": "public.app-category.utilities",
+      "icon": "cpu.icns",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    }
+  }
+}
